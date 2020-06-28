@@ -11,6 +11,7 @@ public class Main {
         char operation = scan.next().charAt(0);
         System.out.println("Enter the second number: ");
         int number2 = scan.nextInt();
+        System.out.println(String.format("Do you want to do the operation %d %c %d ?", number1, operation, number2));
         scan.close();
     }
 }

@@ -12,8 +12,8 @@ public class Main {
         System.out.println("Enter the second number: ");
         int number2 = scan.nextInt();
         System.out.println(String.format("Do you want to do the operation %d %c %d ?", number1, operation, number2));
-        float resul = 0;
-        if (operation == '+'){
+        int resul = 0;
+        /*if (operation == '+'){
             resul = number1 + number2;
         } else if (operation == '-'){
             resul = number1 - number2;
@@ -23,8 +23,25 @@ public class Main {
             resul = number1 / number2;
         } else {
             System.out.println("Invalid operation: ");
+        }*/
+        switch (operation){
+            case '+':
+                resul = number1 + number2;
+                break;
+            case '-':
+                resul = number1 - number2;
+                break;
+            case '*':
+                resul = number1 * number2;
+                break;
+            case '/':
+                resul = number1 / number2;
+                break;
+            default:
+                System.out.println("Invalid operation: ");
+                break;
         }
-        System.out.println(String.format("%d %c %d = %.2f ", number1, operation, number2, resul));
+        System.out.println(String.format("%d %c %d = %d ", number1, operation, number2, resul));
         scan.close();
     }
 }

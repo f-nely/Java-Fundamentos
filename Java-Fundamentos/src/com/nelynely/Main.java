@@ -12,6 +12,19 @@ public class Main {
         System.out.println("Enter the second number: ");
         int number2 = scan.nextInt();
         System.out.println(String.format("Do you want to do the operation %d %c %d ?", number1, operation, number2));
+        float resul = 0;
+        if (operation == '+'){
+            resul = number1 + number2;
+        } else if (operation == '-'){
+            resul = number1 - number2;
+        } else if (operation == '*'){
+            resul = number1 * number2;
+        } else if (operation == '/'){
+            resul = number1 / number2;
+        } else {
+            System.out.println("Invalid operation: ");
+        }
+        System.out.println(String.format("%d %c %d = %.2f ", number1, operation, number2, resul));
         scan.close();
     }
 }

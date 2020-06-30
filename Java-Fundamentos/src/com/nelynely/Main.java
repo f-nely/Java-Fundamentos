@@ -1,5 +1,6 @@
 package com.nelynely;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -41,7 +42,10 @@ public class Main {
                 System.out.println("Invalid operation: ");
                 break;
         }
-        System.out.println(String.format("%d %c %d = %d ", number1, operation, number2, resul));
+        ArrayList<String> historic = new ArrayList<String>();
+        String inputHistoric = String.format("%d %c %d = %d ", number1, operation, number2, resul);
+        historic.add(inputHistoric);
+        System.out.println();
         scan.close();
     }
 }

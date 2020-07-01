@@ -1,6 +1,7 @@
 package com.nelynely;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,16 @@ public class Main {
         while (action > 0) {
             if (action == 1) {
                 System.out.println("Enter the first number: ");
-                int number1 = scan.nextInt();
+                int number1 = 0;
+                try{
+                    number1 = scan.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println(String.format("Ocorreu um erro de formato: %s. O primeiro número assurirá o valor de 1. ", e.getMessage()));
+                    scan.nextLine();
+                    number1 = 1;
+                } catch (Exception e) {
+                    System.out.println("Erro desconhecido. ");
+                }
                 System.out.println("Inform the operation: ");
                 char operation = scan.next().charAt(0);
                 System.out.println("Enter the second number: ");

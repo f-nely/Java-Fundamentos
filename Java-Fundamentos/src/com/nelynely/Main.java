@@ -53,9 +53,10 @@ public class Main {
             } else if (action == 2) {
                 System.out.println("----Historic----");
                 System.out.println(String.format("You already did %d operation ", historic.size()));
-                for (int i = 0; i < historic.size(); i++){
+                historic.forEach(itemHistoric -> System.out.println(itemHistoric));
+                /*for (int i = 0; i < historic.size(); i++){
                     System.out.println(historic.get(i));
-                }
+                }*/
             }
             System.out.println("What you would like to do ?");
             System.out.println("1 - Mathematical operation: ");
